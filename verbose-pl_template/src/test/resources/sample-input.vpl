@@ -1,0 +1,52 @@
+################################
+# variable declarations
+################################
+
+var b of_type Bool is true; 				# A boolean
+var number1 of_type Number is 123; 			# A number
+var number2 of_type Number is -123; 		# A negative number
+var numberFloat of_type Number is 12.3; 	# A float
+var someName of_type String is "123 "; 		# This is a string , not a number
+var onlyDeclared of_type String;
+
+################################
+# basic arithmetics
+################################
+
+number1 + numberFloat; 			# 135.3
+number1 equals number2; 		# false
+NOT true; 						# false
+true OR false; 					# true
+var min of_type Number is 0;
+var max of_type Number;
+max is number1 + number2;
+var average of_type Number is (min + max ) / 2;
+
+################################
+# start block
+################################
+
+{
+	print "Hello earth !";
+	print "Hello, SDU! This is a computer program.";
+}
+
+if (number1 equals number2) {
+	print "yes";
+} else {
+	print "no";
+}
+
+{
+	if (number1 equals someName) {
+		print number1 + " equals " + someName; 	# do you support String concatenation? (
+	} else {
+		print "no";
+	}
+
+	var a of_type Number is 1;
+	while (a less_than 10) {
+		print a;
+		a is a + 1;
+	}
+}
